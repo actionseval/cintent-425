@@ -23,12 +23,12 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      # CINTENT >> INSERT_CINTENT
-      - uses: JavidDitty/setup-cintent@a606c80c34ec190c6a20dea33d6d58ddb6c4e0cc
-
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
+      
+      # CINTENT >> INSERT_CINTENT
+      - uses: JavidDitty/setup-cintent@3e5b2faf83a2ad32c22a1cd0f86f5f20ea53a5ab
 
       - name: Download nltk data
         run: |
@@ -53,12 +53,12 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      # CINTENT >> INSERT_CINTENT
-      - uses: JavidDitty/setup-cintent@a606c80c34ec190c6a20dea33d6d58ddb6c4e0cc
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      
+      # CINTENT >> INSERT_CINTENT
+      - uses: JavidDitty/setup-cintent@3e5b2faf83a2ad32c22a1cd0f86f5f20ea53a5ab
 
       - name: Install pypa/build
         run: python -m pip install build
@@ -96,12 +96,12 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      # CINTENT >> INSERT_CINTENT
-      - uses: JavidDitty/setup-cintent@a606c80c34ec190c6a20dea33d6d58ddb6c4e0cc
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
+      # CINTENT >> INSERT_CINTENT
+      - uses: JavidDitty/setup-cintent@3e5b2faf83a2ad32c22a1cd0f86f5f20ea53a5ab
 
       - run: python -m pip install tox
 
